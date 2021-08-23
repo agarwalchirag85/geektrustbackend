@@ -2,7 +2,7 @@ const { decryptingMessage } = require("../../src/service/decryptmessage");
 
 describe("Decrypting Message test", () => {
 
-    it("Checking if the input file contains correct input between (A-Za-Z) " ,() =>{
+    it("Checking if the input file contains correct input i.e. alphabets " ,() =>{
         let secretMessage1 = "R4OZO";
         let cipherKeylength1 = 3; 
       

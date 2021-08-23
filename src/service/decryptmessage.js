@@ -26,7 +26,7 @@ const decryptingMessage = class {
             }
             else if(secretMessage[i]!==' ')
             {
-                console.log("Input file contains wrong input it should be from (A-Za-Z)");
+                console.log("Input file contains wrong input it should be alphabets");
                 return -1;
             }
         }

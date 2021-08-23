@@ -6,11 +6,11 @@ const matchingMessage = class {
       this.finallist=finallist;
     }
     
-    matchting() 
+    matching() 
     {
         let flag=0;
-        let kindgomename=this.kingdomEmblem;
-        let emblem=KINGDOM_EMBLEM[kindgomename];
+        let kingdomname=this.kingdomEmblem;
+        let emblem=KINGDOM_EMBLEM[kingdomname];
         let message=this.decryptedMessage;
         for(let i=0;i< emblem.length;i++)
          {
@@ -27,7 +27,7 @@ const matchingMessage = class {
          }
     
         if(flag === 0)
-        this.finallist.push(kindgomename);
+        this.finallist.push(kingdomname);
 
         return this.finallist;
     }

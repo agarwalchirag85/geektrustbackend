@@ -8,6 +8,8 @@ const { allies } = require("./service/calculateAllies");
 let inputfilepath;
 if(process.argv.length===3)
     inputfilepath=process.argv[2];
+else
+    console.log("Please provide a proper command line for input file path ");
 
 
 let finallist=[];
@@ -23,10 +25,11 @@ try{
         let decryptedMessage = new decryptingMessage(message,cipherKeylength).decrypting();
         if(decryptedMessage!==-1)
         {
-            finallist = new matchingMessage(decryptedMessage,emblem,finallist).matchting();
+            finallist = new matchingMessage(decryptedMessage,emblem,finallist).matching();
             if(last){
-                alliensename = new allies(finallist).writtigResult();
-                console.log(alliensename);
+                const unique = [ ...new Set(finallist)];
+                alliesname = new allies(unique).writingResult();
+                console.log(alliesname);
             }
         }
     });

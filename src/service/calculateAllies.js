@@ -8,7 +8,7 @@ const allies = class{
         this.finallist=finallist;
     }
 
-    writtigResult()
+    writingResult()
     {
         
             let output="";

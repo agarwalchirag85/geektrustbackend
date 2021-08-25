@@ -12,7 +12,7 @@ else
     console.log("Please provide a proper command line for input file path ");
 
 
-let finallist=[];
+let finallist=new Set();
 try{
 
     lineReader.eachLine(inputfilepath, (line, last) => {
@@ -27,8 +27,7 @@ try{
         {
             finallist = new matchingMessage(decryptedMessage,emblem,finallist).matching();
             if(last){
-                const unique = [ ...new Set(finallist)];
-                alliesname = new allies(unique).writingResult();
+                alliesname = new allies(finallist).writingResult();
                 console.log(alliesname);
             }
         }

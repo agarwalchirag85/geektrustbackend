@@ -9,15 +9,15 @@ const matchingMessage = class {
     matching() 
     {
         let flag=0;
-        let kingdomname=this.kingdomEmblem;
-        let emblem=KINGDOM_EMBLEM[kingdomname];
+        let kingdomName=this.kingdomEmblem;
+        let animalEmblem=KINGDOM_EMBLEM[kingdomName];
         let message=this.decryptedMessage;
-        for(let i=0;i< emblem.length;i++)
+        for(let i=0;i< animalEmblem.length;i++)
          {
              
-             if(message[emblem[i]] > 0)
+             if(message[animalEmblem[i]] > 0)
              {
-                message[emblem[i]]=message[emblem[i]]-1;
+                message[animalEmblem[i]]=message[animalEmblem[i]]-1;
              }
              else
              {
@@ -25,10 +25,10 @@ const matchingMessage = class {
                  break;
              }
          }
-    
-        if(flag === 0)
-        this.finallist.push(kingdomname);
 
+        if(flag === 0)
+        this.finallist.add(kingdomName);
+              
         return this.finallist;
     }
 };

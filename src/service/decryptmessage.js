@@ -1,4 +1,4 @@
-const { ASCII_OF_A,ASCII_OF_Z,NO_OF_LETTER, A,Z } = require("../commonconstant/constant");
+const { ASCII_OF_A,NO_OF_LETTER, A,Z } = require("../commonconstant/constant");
 
 const decryptingMessage = class {
     constructor(message,cipherKeylength) {

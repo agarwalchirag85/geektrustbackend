@@ -12,11 +12,11 @@ const allies = class{
     {
         
             let output="";
-            if(this.finallist.length>=NO_OF_KINGDOM_ALLY)
+            if(this.finallist.size>=NO_OF_KINGDOM_ALLY)
             {
                 output=EMBLEM_OF_CONQUERER;
-                for(let i=0;i<this.finallist.length;i++)
-                    output = output + this.finallist[i]+" ";
+                for(const item of this.finallist)
+                    output = output + item +" ";
             }
             else
             {
